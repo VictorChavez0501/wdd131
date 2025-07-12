@@ -5,11 +5,11 @@ body {
 }
 
 header {
+  text-align: center;
   background-color: #003366;
   color: #fff;
   padding: 1rem;
   position: relative;
-  text-align: center;
 }
 
 #menu {
