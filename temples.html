@@ -4,21 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Temple Album</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/temples.css" />
-  <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)" />
-  <script src="scripts/temples.js" defer></script>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" />
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/menu.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Temple Album</h1>
-    <button id="menu">&#9776;</button>
-    <nav id="navMenu">
+    <span id="course-title">WDD 131 - Temple Album</span>
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <nav class="navigation">
       <a href="#">Home</a>
-      <a href="#">Old</a>
-      <a href="#">New</a>
-      <a href="#">Large</a>
-      <a href="#">Small</a>
+      <a href="#">Temples</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 

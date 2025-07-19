@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Guatemala</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Discover Guatemala</h1>
+  </header>
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/guatemala_hero.webp" type="image/webp">
+        <img src="images/guatemala_hero.webp" alt="Landscape of Guatemala" />
+      </picture>
+    </section>
+    <section class="info">
+      <h2>Welcome to Guatemala</h2>
+      <p>Experience the rich culture, natural beauty, and historical heritage.</p>
+    </section>
+    <section class="weather">
+      <h2>Weather <span class="weather-icon">⛅</span></h2>
+      <p>Temperature: <span id="temperature">15</span>°C</p>
+      <p>Wind Speed: <span id="windSpeed">10</span> km/h</p>
+      <p>Wind Chill: <span id="windChill">Calculating...</span></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
