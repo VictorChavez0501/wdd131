@@ -1,21 +1,28 @@
-function calculateWindChill(temp, windSpeed) {
-  if (temp <= 10 && windSpeed > 4.8) {
-    let windChill = 13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16)
-                    + 0.3965 * temp * Math.pow(windSpeed, 0.16);
-    return windChill.toFixed(1) + " °C";
-  } else {
-    return "N/A";
-  }
+// Set the current year in the footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Displays the last modification date of the document
+document.getElementById("lastModified").textContent = document.lastModified;
+
+// Capture temperature and wind speed values from the HTML
+const tempC = parseFloat(document.getElementById("temperature").textContent);
+const windKmH = parseFloat(document.getElementById("windSpeed").textContent);
+
+// Function to calculate the wind chill in °C
+function calculateWindChill(tempC, windKmH) {
+  return (
+    13.12 +
+    0.6215 * tempC -
+    11.37 * Math.pow(windKmH, 0.16) +
+    0.3965 * tempC * Math.pow(windKmH, 0.16)
+  ).toFixed(1);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const yearSpan = document.getElementById("year");
-  const modifiedSpan = document.getElementById("lastModified");
-  const temp = parseFloat(document.getElementById("temperature").textContent);
-  const windSpeed = parseFloat(document.getElementById("windSpeed").textContent);
-  const windChillSpan = document.getElementById("windChill");
+// Condition: temperature ≤ 10 °C and wind > 4.8 km/h
+let windChill = "N/A";
+if (tempC <= 10 && windKmH > 4.8) {
+  windChill = `${calculateWindChill(tempC, windKmH)} °C`;
+}
 
-  yearSpan.textContent = new Date().getFullYear();
-  modifiedSpan.textContent = document.lastModified;
-  windChillSpan.textContent = calculateWindChill(temp, windSpeed);
-});
+// Display the result in the document
+document.getElementById("windChill").textContent = windChill;
