@@ -1,3 +1,4 @@
+// Array of temples with their properties
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -57,28 +58,38 @@ const temples = [
   }
 ];
 
+// Card container
 const container = document.querySelector('#templeContainer');
 
+// Create individual card
 function createTempleCard(temple) {
   const card = document.createElement('div');
-  card.className = 'card';
+  card.className = 'temple-card';
 
   card.innerHTML = `
     <h2>${temple.templeName}</h2>
     <img src="${temple.imageUrl}" loading="lazy" alt="${temple.templeName}">
-    <p><strong>Location:</strong> ${temple.location}</p>
-    <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-    <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+    <p><span>Location:</span> ${temple.location}</p>
+    <p><span>Dedicated:</span> ${temple.dedicated}</p>
+    <p><span>Area:</span> ${temple.area.toLocaleString()} sq ft</p>
   `;
 
   container.appendChild(card);
 }
 
+// Show temples with optional filter
 function displayTemples(filterFn = () => true) {
   container.innerHTML = '';
   temples.filter(filterFn).forEach(createTempleCard);
 }
 
+// Filtering logic
+function getYear(dedicatedDateStr) {
+  const parts = dedicatedDateStr.split(',');
+  return parseInt(parts[0]); // obtiene solo el año (e.g., "1983")
+}
+
+// Menu Events
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -86,10 +97,10 @@ document.querySelectorAll('nav a').forEach(link => {
 
     switch (filter) {
       case 'old':
-        displayTemples(t => new Date(t.dedicated).getFullYear() < 1900);
+        displayTemples(t => getYear(t.dedicated) < 1900);
         break;
       case 'new':
-        displayTemples(t => new Date(t.dedicated).getFullYear() > 2000);
+        displayTemples(t => getYear(t.dedicated) > 2000);
         break;
       case 'large':
         displayTemples(t => t.area > 90000);
@@ -97,15 +108,15 @@ document.querySelectorAll('nav a').forEach(link => {
       case 'small':
         displayTemples(t => t.area < 10000);
         break;
-      default:
+      default: // home
         displayTemples();
     }
   });
 });
 
-// Footer year and last modified
+// Dynamic Footer
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
-// Initial load
+// Show all temples on load
 displayTemples();
