@@ -1,0 +1,49 @@
+.temples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.temple-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.temple-card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+
+.temple-card p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.temple-card p span {
+  font-weight: bold;
+  color: indigo;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.temple-card img {
+  margin-top: 1rem;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.temple-card img:hover {
+  transform: scale(1.03);
+}
+

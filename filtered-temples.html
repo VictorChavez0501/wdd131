@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filtered Temples</title>
+  <link rel="stylesheet" href="../styles/base.css" />
+  <link rel="stylesheet" href="../styles/filtered-temples.css" />
+  <script src="../scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menuBtn">☰</button>
+    <nav id="mainNav">
+      <a href="#" data-filter="home">Home</a>
+      <a href="#" data-filter="old">Old</a>
+      <a href="#" data-filter="new">New</a>
+      <a href="#" data-filter="large">Large</a>
+      <a href="#" data-filter="small">Small</a>
+    </nav>
+  </header>
+  <main>
+    <div id="templeContainer" class="grid"></div>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> | Victor Andres Chavez Tuchez | Guatemala</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
