@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Temple Album</title>
-  <link rel="stylesheet" href="styles/base.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/temples.css" />
   <link rel="stylesheet" href="styles/temples-large.css" />
-  <script src="scripts/getdates.js" defer></script>
-  <script src="scripts/menu.js" defer></script>
+  <script src="scripts/temples.js" defer></script>
+
 </head>
 <body>
   <header>
@@ -15,8 +16,10 @@
     <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
     <nav class="navigation">
       <a href="#">Home</a>
-      <a href="#">Temples</a>
-      <a href="#">Contact</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
     </nav>
   </header>
 
@@ -91,7 +94,7 @@
 
   <footer>
     <p>&copy; <span id="year"></span> | Victor Andres Chavez Tuchez | Guatemala</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+    <p id="lastModified"></p>
   </footer>
 </body>
 </html>

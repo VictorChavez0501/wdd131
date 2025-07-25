@@ -1,13 +1,14 @@
-// Footer info
+// Fecha actual en el footer
 document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
 
-// Hamburger toggle
-const menuButton = document.getElementById("menu");
-const navMenu = document.getElementById("navMenu");
+// Fecha de última modificación
+document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
-menuButton.addEventListener("click", () => {
-  const isOpen = navMenu.style.display === "flex";
-  navMenu.style.display = isOpen ? "none" : "flex";
-  menuButton.innerHTML = isOpen ? "&#9776;" : "&#10005;";
+// Funcionalidad del menú hamburguesa
+const menuToggle = document.querySelector(".menu-toggle");
+const navigation = document.querySelector(".navigation");
+
+menuToggle.addEventListener("click", () => {
+  navigation.classList.toggle("show");
+  menuToggle.textContent = navigation.classList.contains("show") ? "✖" : "☰";
 });

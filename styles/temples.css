@@ -1,49 +1,61 @@
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 0;
+  background-color: #f9f9f9;
 }
 
 header {
-  text-align: center;
-  background-color: #003366;
-  color: #fff;
+  background-color: #002d62;
+  color: white;
   padding: 1rem;
+  text-align: center;
   position: relative;
 }
 
-#menu {
-  font-size: 2rem;
+#course-title {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.menu-toggle {
   background: none;
   border: none;
   color: white;
+  font-size: 1.8rem;
   position: absolute;
-  right: 1rem;
   top: 1rem;
+  right: 1rem;
+  display: block;
 }
 
-nav {
+.navigation {
   display: none;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
-nav a {
+.navigation.show {
+  display: flex;
+}
+
+.navigation a {
   color: white;
   text-decoration: none;
   padding: 0.5rem;
-  background-color:#0059b3;
+  transition: background-color 0.3s;
 }
 
-nav a:hover {
-  background-color: #0059b3;
+.navigation a:hover {
+  background-color: #004b8d;
+  border-radius: 5px;
 }
 
 main {
+  padding: 1rem;
   max-width: 800px;
   margin: 0 auto;
-  padding: 1rem;
 }
 
 .container {
@@ -53,13 +65,22 @@ main {
 }
 
 figure {
-  margin: 0;
-  padding: 0;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 footer {
-  text-align: center;
+  background-color: #002d62;
   color: white;
-  background-color:#0059b3;
+  text-align: center;
   padding: 1rem;
 }

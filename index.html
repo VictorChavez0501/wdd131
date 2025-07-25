@@ -3,30 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Victor Andres Chavez Tuchez | WDD 131</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Victor Andres Chavez Tuchez | Portfolio home page for the web development course." />
+  <meta name="author" content="Victor Andres Chavez Tuchez" />
+  <title>WDD 131 – Dynamic Web Fundamentals – Victor Andres Chavez Tuchez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/base.css" />
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Victor Andres Chavez Tuchez</h1>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
     <nav>
-      <button id="menu" aria-label="Toggle Menu">&#9776;</button>
-      <ul class="navigation">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="temple/main.html">Temples</a></li>
-      </ul>
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+      <a href="temple/main.html">Final Project</a>
     </nav>
   </header>
 
   <main>
-    <picture>
-      <img src="temple/guatemala.jpg" alt="Templo de Guatemala" width="300">
-    </picture>
-    <section>
+    <h1>Victor Andres Chavez Tuchez</h1>
+    
+    <section class="card">
       <h2>About Me</h2>
-      <p>I am from Guatemala and I love web development and learning new things. This is part of my WDD131 project.</p>
-      <h3>Guatemala</h3>
-      <p>Guatemala is a beautiful country with rich history and culture.</p>
+      <img src="images/profile.jpg" alt="Victor Chavez smiling" />
+      <p>I am from Guatemala and I love web development, music, and learning new things. I'm currently studying WDD131 and enjoying the creative process of building the web.</p>
+    </section>
+
+    <section class="card">
+      <h2>My Favorite Place</h2>
+      <img src="images/guatemala_hero.jpg" alt="Landscape of Guatemala" />
+      <p>Guatemala is a vibrant country full of culture, history, and stunning landscapes. From volcanoes to ancient ruins, it's a land of beauty and inspiration.</p>
     </section>
   </main>
 
@@ -34,7 +41,5 @@
     <p>&copy; <span id="currentyear"></span> Victor Andres Chavez Tuchez | Guatemala</p>
     <p id="lastModified"></p>
   </footer>
-
-  <script src="scripts/getdates.js"></script>
 </body>
 </html>
