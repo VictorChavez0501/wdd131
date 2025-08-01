@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Review Submitted</title>
+</head>
+<body>
+  <main>
+    <h1>Thank you for your review!</h1>
+    <p>You have submitted <span id="counter">0</span> reviews so far.</p>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Victor Chavez | Guatemala</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    // Counter logic
+    let count = localStorage.getItem("reviewCount") || 0;
+    count++;
+    localStorage.setItem("reviewCount", count);
+    document.getElementById("counter").textContent = count;
+
+    // Footer updates
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
